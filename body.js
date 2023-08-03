@@ -2,14 +2,14 @@
  * A simple huiman body visualizer.
  * 
  */
-import * as THREE from '/three/build/three.module.js';
-import { OrbitControls } from '/three/examples/jsm/controls/OrbitControls.js';
-import { FBXLoader } from '/three/examples/jsm/loaders/FBXLoader.js'
-import { GLTFLoader } from '/three/examples/jsm/loaders/GLTFLoader.js';
-import { FontLoader } from '/three/examples/jsm/loaders/FontLoader.js';
-import { RectAreaLightHelper } from '/three/examples/jsm/helpers/RectAreaLightHelper.js';
-import { TextGeometry } from '/three/examples/jsm/geometries/TextGeometry.js';
-//import Stats from '/three/examples/jsm/libs/stats.module.js'
+import * as THREE from './three/build/three.module.js';
+import { OrbitControls } from './three/examples/jsm/controls/OrbitControls.js';
+import { FBXLoader } from './three/examples/jsm/loaders/FBXLoader.js'
+import { GLTFLoader } from './three/examples/jsm/loaders/GLTFLoader.js';
+import { FontLoader } from './three/examples/jsm/loaders/FontLoader.js';
+import { RectAreaLightHelper } from './three/examples/jsm/helpers/RectAreaLightHelper.js';
+import { TextGeometry } from './three/examples/jsm/geometries/TextGeometry.js';
+//import Stats from './three/examples/jsm/libs/stats.module.js'
 
 const scene = new THREE.Scene()
 //scene.add(new THREE.AxesHelper(5))

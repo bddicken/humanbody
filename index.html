@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+    <meta charset="utf-8">
+		
+    <title>The Human Body Visualiser</title>
+		
+    <style>
+			body {
+        margin: 0;
+      }
+      .over {
+        position: fixed;
+        z-index: 100;
+        font-size: 19px;
+        font-family: Helvetica, Arial;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: rgba(200, 200, 200, 0.5);
+        border-radius: 10px;
+        backdrop-filter: blur(5px); 
+        margin: 0px;
+      }
+      
+      #toggleButton {
+        position: fixed;
+        font-family: Helvetica, Arial;
+        font-size: 19px; 
+        top: 20px;
+        right: 20px;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      #instructions {
+        position: fixed;
+        font-size: 15px; 
+        top: 20px;
+        left: 20px;
+        width: 200px;
+        line-height: 25px;
+        text-align: left;
+        cursor: pointer;
+        padding: 10px;
+        box-sizing: border-box;
+        opacity: 0;
+      }
+		</style>
+	
+  </head>
+	
+  <body style="background-image: linear-gradient(to bottom right, #223344, #443322);">
+
+    <script>
+      let freeMove = false;
+    </script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/three/build/three.module.js"
+        }
+      }
+    </script>
+
+		<script type="module" src="body.js">
+		</script>
+    
+    <div class="over" id="instructions">
+      <b>Rotate:</b> click and drag
+      <br/>
+      <b>Pan:</b> right-click and drag
+      <br/>
+      <b>Zoom:</b> pinch / scroll
+    </div>
+
+    <script>
+      function toggle() {
+        freeMove = ! freeMove;
+        if (freeMove) {
+          document.getElementById('toggleButton').innerText = "Disable Freemove";
+          document.getElementById('instructions').style.opacity = 1;
+        }
+        else {
+          document.getElementById('toggleButton').innerText = "Enable Freemove";
+          document.getElementById('instructions').style.opacity = 0;
+        }
+      }
+    </script>
+
+    <div class="over" id="toggleButton" onclick="toggle()">
+     Enable Freemove
+    </div>
+
+  </body>
+
+</html>
+
